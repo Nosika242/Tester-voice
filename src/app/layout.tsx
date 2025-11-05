@@ -1,0 +1,36 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { BlogProvider } from "../context/BlogContext";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+   title: "VoiceTrendz | Discover Music, News & Artists",
+  description: "Explore the latest songs, news, and artists on VoiceTrendz.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
+          <BlogProvider>
+        {children}
+        </BlogProvider>
+      </body>
+    </html>
+  );
+}

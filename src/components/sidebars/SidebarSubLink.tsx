@@ -29,8 +29,8 @@ export default function SidebarSubLink({
         className={`flex items-center gap-2 px-5 py-2 rounded transition-all duration-200 
           ${
             isActive
-              ? "bg-[#1d546c] text-white font-semibold"
-              : `${blog.textClass} hover:bg-[#1d546c] hover:text-white`
+              ? "bg-[#00001a] text-white font-semibold"
+              : `${blog.textClass} hover:bg-blue-950/50 hover:text-white`
           }`}
       >
         {sub.image && (

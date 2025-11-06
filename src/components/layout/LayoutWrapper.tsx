@@ -26,8 +26,7 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
           onClick={closeSidebar}
         />
       )}
-      {/* Sidebar (hidden on mobile unless toggled) */}
-
+      
       <div
         className={`fixed left-0 top-0 z-40 h-full w-64 flex flex-col justify-between transform transition-transform duration-300 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -43,8 +42,8 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
           <Navbar onMenuClick={() => setSidebarOpen(true)} />
         </div>
 
-        <main className="flex-1 overflow-y-auto pt-25 md:pt-30 px-4 md:px-6 scroll-smooth">
-          <div className="min-h-[calc(100vh-80px)]">{children}</div>
+        <main className="flex-1 overflow-y-auto scroll-smooth">
+          <div className="min-h-[calc(100vh-80px)] mt-40 px-6 sm:px-8">{children}</div>
           <LinksPage />
         </main>
       </div>

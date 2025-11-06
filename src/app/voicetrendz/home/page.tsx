@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { hotStories, artistItems, newsItems } from "@/src/types";

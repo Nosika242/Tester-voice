@@ -2,22 +2,29 @@
 
 import Link from "next/link";
 import useBlogContext from "@/src/hooks/useBlogContext";
+import Image from "next/image";
 
 export default function LinksPage() {
   const blog = useBlogContext();
   if (!blog) return null;
 
   return (
-    <footer
-      className={`${blog.bgClass} ${blog.borderClass} border-t transition-all duration-300`}
-    >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-10">
+    <footer className={`${blog.bgClass} border-gray-900/70  border-t transition-all duration-300`} >
+      <div className="mx-auto py-8 md:py-10 px-6 sm:px-8">
         <div className="mb-10">
-          <Link href="/" className="hover:text-purple-400 transition-colors">
-            <span className={`text-2xl font-bold ${blog.textClass}`}>
+            <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/assets/logo.png"
+            alt="VoiceTrendz Logo"
+            width={40}
+            height={40}
+            className="object-contain rounded-full"
+          />
+         <span className={`text-2xl font-bold ${blog.textClass}`}>
               VoiceTrendz
             </span>
-          </Link>
+       </Link>
+      
         </div>
         {/* <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] "> */}
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
@@ -98,16 +105,14 @@ export default function LinksPage() {
             </ul>
           </div>
         </div>
-
+       </div>
         {/* Footer Bottom */}
-        <div
-          className={`border-t ${blog.borderClass} mt-12 pt-8 text-center text-sm ${blog.textClass}`}
-        >
+        <div className={`border-t border-slate-900 my-8 pt-8 text-center text-sm ${blog.textClass}`} >
           <p className="opacity-60">
             &copy; {new Date().getFullYear()} VoiceTrendz. All rights reserved.
           </p>
         </div>
-      </div>
+      
     </footer>
   );
 }

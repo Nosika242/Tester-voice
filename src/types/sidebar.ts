@@ -20,7 +20,7 @@ export interface SidebarItem {
 export const sidebarData: SidebarItem[] = [
   {
     name: "Home",
-    url: "/voicetrendz",
+    url: "/voicetrendz/home",
     icon: Home,
     sublinks: [],
   },

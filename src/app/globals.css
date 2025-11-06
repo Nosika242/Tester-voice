@@ -46,37 +46,58 @@ html, body {
   background-attachment: fixed;
   background-size: cover;
 } */
-
-.articles {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 2rem;
-padding: 4rem 3rem;
-}
-
-
-.card {
-background-color: var(--clr-mid2);
-border-radius: 12px;
-padding: 1.5rem;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-
-.card h3 {
-color: var(--clr-light);
-margin-bottom: 0.5rem;
-}
-
-
-.card p {
-color: var(--clr-light);
-font-size: 0.95rem;
-line-height: 1.6;
-}
+ 
+/* 
+theme=dark]
+Specificity: (0,1,0)
+ {
+    --bg-5: #151617;
+    --bg-4: #1a1b1c;
+    --bg-3: #222324;
+    --bg-2: #2c2d2e;
+    --bg-1: #4b4e52;
+    --bg-L0: var(--bg-l0);
+    --bg-L0-atn: var(--bg-l0-gray);
+    --bg-L1: var(--bg-l1);
+    --bg-L1-intro: var(--gradient-1);
+    --bg-L1-act: var(--gradient-2);
+    --bg-L1-atn: var(--bg-l1-white);
+    --bg-L2: var(--bg-l2);
+    --border-card-default: var(--line-base);
+    --border-card-other: var(--line-base);
+    --divider: var(--line-base);
+    --border-2: #333435;
+    --border-1: #484b4f;
+    --secondary-text: var(--content-tertiary);
+    --primary-text: var(--content-secondary);
+    --subtitle: #cdcecf;
+    --title: var(--content-primary);
+    --shadow-color-0: rgba(0, 0, 0, .1);
+    --shadow-color-1: rgba(0, 0, 0, .2);
+    --shadow-color-2: rgba(0, 0, 0, .3);
+    --shadow-color-3: rgba(0, 0, 0, .4);
+    --skeleton: var(--gray-14);
+    --skeleton-to: var(--gray-12);
+    --scrollbar-thumb: var(--gray-12);
+    --scrollbar-track: var(--gray-14);
+    --hongdou-6: var(--tint-red-base);
+    --bg-primary: var(--bg-l0);
+    --bg-secondary: var(--bg-l1);
+    --bg-tertiary: var(--bg-l2);
+    --bg-modal: var(--fill-high);
+    --bg-card: var(--fill-higher);
+    --bg-tooltip: var(--fill-gray);
+    --bg-level-primary: var(--bg-l0-gray);
+    --bg-level-secondary: var(--bg-l1-white);
+    --bg-level-tertiary: var(--bg-l2);
+    --bg-mask: var(--bg-scrim);
+    --bg-trade-primary: var(--gray-17);
+    --bg-trade-secondary: var(--gray-16);
+    --bg-top-banner: #000c1d;
+    --bg-popconfirm: var(--fill-higher);
+    --bg-tooltips: var(--gray-13);
+    --icon-primary: var(--content-primary);
+    --icon-secondary: var(--content-secondary);
+    --icon-tertiary: var(--content-tertiary);
+    --icon-quarternary: var(--content-disable);
+    --icon-mask: var(--gray-7); */

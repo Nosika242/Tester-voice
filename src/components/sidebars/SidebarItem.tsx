@@ -39,8 +39,8 @@ export default function SidebarItem({
           className={`flex-1 flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 
             ${
               isActive
-                ? "font-semibold bg-blue-800/50 backdrop-blur-xl hover:bg-blue-400/50 text-white"
-                : "hover:bg-[#1d546c] hover:text-white text-[#f4f4f4]"
+                ? "font-semibold bg-[#00001a]  hover:bg-blue-950/50 text-white"
+                : "hover:bg-[#00001a] hover:text-white text-[#f4f4f4]"
             }`}
         >
           {item.icon ? (

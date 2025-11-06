@@ -1,50 +1,101 @@
+
 "use client";
 
-import { useEffect, useState } from "react";
-
+import { useEffect } from "react";
+import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-export default function HomePage() {
-  const [countdown, setCountdown] = useState(10);
+ 
+
+export default function LandingPage()  {
   const router = useRouter();
+  
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCountdown((prev) => (prev > 1 ? prev - 1 : 0));
-    }, 1000);
-    const redirect = setTimeout(() => {
+    const timer = setTimeout(() => {
       router.push("/voicetrendz");
-    }, 10000);
-    return () => {
-      clearInterval(timer);
-      clearTimeout(redirect);
-    };
+    }, 5000); // 4 seconds delay
+    return () => clearTimeout(timer);
   }, [router]);
 
+  const text = "VOICETRENDZ".split(""); // Split letters for animation
+  // Animation setup
+  const container: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { delayChildren: 1, staggerChildren: 0.1 },
+    },
+  };
+
+  const letter: Variants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
+    },
+  };
+  
+
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen text-gray-800 px-6">
-      <section className="text-center max-w-2xl">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-          Welcome to <span className="text-blue-600">VoiceTrendz</span>
-        </h1>
+    <div className={` bg-gradient-to-tr from-[#cce6ff] flex flex-col items-center justify-center h-screen overflow-hidden relative `}>
+      {/* Shimmer Animation Keyframes */}
+      <style jsx global>{`
+        @keyframes shimmer {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 200% 50%;
+          }
+        }
+      `}</style>
 
-        <p className="text-lg text-gray-600 mb-8">
-          Your home for music, artists, news, and community. Explore songs,
-          lyrics, press releases, and connect with creators worldwide.
-        </p>
+      {/* Logo */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          src="/assets/logo_3.jpg"
+          alt="VoiceTrendz Logo"
+          width={180}
+          height={180}
+          className="object-contain rounded-lg drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+        />
+      </motion.div>
 
-        <p className="text-gray-500 text-base">
-          Redirecting to voicetrendz in{" "}
-          <span className="font-semibold">{countdown}</span> seconds...
-        </p>
+      {/* Shimmering Gradient Text */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="flex mt-6 text-2xl sm:text-5xl font-extrabold tracking-[0.3em]
+        bg-gradient-to-br from-[#00b4d8] via-[#050515] to-[#ff9900]
+        bg-[length:200%_auto] text-transparent bg-clip-text
+        animate-[shimmer_3s_linear_infinite] mx-auto"
+      >
+        {text.map((char, index) => (
+          <motion.span key={index} variants={letter}>
+            {char}
+          </motion.span>
+        ))}
+      </motion.div>
 
-        <button
-          onClick={() => router.push("/voicetrendz")}
-          className="mt-4 px-6 py-2 bg-[#00A58E] text-white rounded-lg hover:bg-[#00907B] transition-all duration-300"
-        >
-          Go Now
-        </button>
-      </section>
-    </main>
+      {/* Subtext / Tagline */}
+      <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2.5, duration: 1 }}
+        className="mt-4 text-sm sm:text-base text-slate-950 tracking-wide"
+      >
+        Discover • Create • Inspire
+      </motion.p>
+    </div>
   );
 }
+
+// from-[#00b4d8] via-[#8ab4f8] to-[#1D546C]

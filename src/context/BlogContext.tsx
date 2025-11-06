@@ -52,7 +52,7 @@ export const BlogProvider = ({ children }: { children: ReactNode }) => {
 
   const bgClass = isDarkMode
     ? "bg-gradient-to-b from-[#f4f4f5] via-[#e4e4e7] to-[#d4d4d8]"
-    : "bg-gradient-to-b from-[#00001a] to-[#000000]";
+    : "bg-gradient-to-br from-[#00001a] via-black to-[#050515] ";
 
   const textClass = isDarkMode ? "text-[#0c2b4e]" : "text-gray-100";
 

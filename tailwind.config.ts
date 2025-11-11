@@ -10,35 +10,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        brand: {
-          dark: "#000420",
-          darker: "#00001a",
-          accent: "#1D546C",
-          light: "#F4F4F4",
-          orange: "#ff9900",
-          black: "#000000",
-          blue: "#050515",
-        },
+      fontFamily: {
+        sans: ["var(--font-dm-sans)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
+        manrope: ["var(--font-manrope)", "sans-serif"],
+        spaceGrotesk: ["var(--font-space-grotesk)", "sans-serif"],
       },
     },
   },
-  plugins: [
-    function ({ addUtilities }: any) {
-      const newUtilities = {
-        ".bg-gradient-brand-dark": {
-          background: "linear-gradient(to bottom right, #000420, #00001a)",
-        },
-        ".bg-gradient-brand-light": {
-          background: "linear-gradient(to bottom right, #f3f4f6, #d1d5db)",
-        },
-        ".bg-gradient-brand-accent": {
-          background: "linear-gradient(to bottom right, #1D546C, #000420)",
-        },
-      };
-      addUtilities(newUtilities);
-    },
-  ],
+  plugins: [],
 };
 
 export default config;

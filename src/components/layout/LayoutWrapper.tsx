@@ -4,7 +4,7 @@ import { ReactNode, useState } from "react";
 import Navbar from "./Navbar";
 import Sidebar from "../sidebars/Sidebar";
 import useBlogContext from "@/src/hooks/useBlogContext";
-import LinksPage from "./Footer";
+import FooterPage from "./Footer";
 
 interface LayoutWrapperProps {
   children: ReactNode;
@@ -16,13 +16,15 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
   const closeSidebar = () => setSidebarOpen(false);
   if (!blog) return null;
 
+  // ${blog.bgClass}
+
   return (
     <div
-      className={`relative flex h-screen  transition-all duration-500 ${blog.bgClass} ${blog.textClass}`}
+      className={`relative flex h-screen  transition-all duration-500`}
     >
       {sidebarOpen && (
         <div
-          className="fixed inset-0 z-30 bg-black/50 backdrop-blur-sm md:hidden"
+          className="fixed backdrop-blur-sm md:hidden"
           onClick={closeSidebar}
         />
       )}
@@ -43,8 +45,8 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
         </div>
 
         <main className="flex-1 overflow-y-auto scroll-smooth">
-          <div className="min-h-[calc(100vh-80px)] mt-40 px-6 sm:px-8">{children}</div>
-          <LinksPage />
+          <div className="min-h-[calc(100vh-80px)] mt-40 px-4 sm:px-8">{children}</div>
+          <FooterPage />
         </main>
       </div>
     </div>

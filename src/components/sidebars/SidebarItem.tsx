@@ -30,7 +30,7 @@ export default function SidebarItem({
   const isItemOpen = openItems.includes(item.name);
 
   return (
-    <div className={`mb-2 ${blog.textClass}`}>
+    <div className={`mb-2 text-primary`}>
       {/* Main Item */}
       <div className="flex items-center justify-between">
         <Link
@@ -39,8 +39,8 @@ export default function SidebarItem({
           className={`flex-1 flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 
             ${
               isActive
-                ? "font-semibold bg-[#00001a]  hover:bg-blue-950/50 text-white"
-                : "hover:bg-[#00001a] hover:text-white text-[#f4f4f4]"
+                ? "font-semibold bg-accent  hover:bg-amber-500 text-white"
+                : "hover-color hover:text-white text-primary"
             }`}
         >
           {item.icon ? (
@@ -58,7 +58,7 @@ export default function SidebarItem({
         {item.sublinks && item.sublinks.length > 0 && (
           <button
             onClick={() => toggleItem(item.name)}
-            className={`p-2 ${blog.textClass} hover:text-[#1d546c]`}
+            className={`p-2 text-primary hover:text-[#1d546c]`}
           >
             {isItemOpen ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
           </button>

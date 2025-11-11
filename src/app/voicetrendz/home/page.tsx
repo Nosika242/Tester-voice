@@ -8,14 +8,7 @@ export default function DashboardPage() {
   return (
  <div className="h-full min-h-screen text-white flex flex-col mb-10">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-blue-400 mb-2">
-          Welcome to VoiceTrendz Dashboard
-        </h1>
-        <p className="text-gray-400">
-          Discover the hottest stories, trending artists, and breaking music news.
-        </p>
-      </div>
+    
 
       {/* Hot Stories Section */}
       <section className="mb-12">
@@ -26,7 +19,7 @@ export default function DashboardPage() {
           {hotStories.map((story, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-[#331400] to-[#00001a] border border-[#333435] rounded-xl shadow-lg hover:-translate-y-2 hover:shadow-blue-400/30 transition-all duration-300"
+              className="card-body2 border border-[#333435] rounded-xl shadow-lg hover:-translate-y-2 hover:shadow-blue-400/30 transition-all duration-300"
             >
               <img
                 src={story.image}
@@ -48,13 +41,13 @@ export default function DashboardPage() {
       {/*  Artists Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-blue-400 mb-6">
-          🎤 Featured Artists
+          🎤 New Artists Showcase
         </h2>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6">
           {artistItems.map((artist, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-[#000420] to-[#1a0a00] border border-[#484b4f] rounded-xl p-4 shadow-lg hover:-translate-y-2 transition-all duration-300"
+              className="card-body border border-[#484b4f] rounded-xl p-4 shadow-lg hover:-translate-y-2 transition-all duration-300"
             >
               <img
                 src={artist.image}
@@ -78,7 +71,7 @@ export default function DashboardPage() {
           {newsItems.map((news, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-[#1a0a00] to-[#00001a] border border-[#333435] rounded-xl shadow-lg hover:-translate-y-2 hover:shadow-blue-400/30 transition-all duration-300"
+              className=" border border-[#333435] rounded-xl shadow-lg hover:-translate-y-2 hover:shadow-blue-400/30 transition-all duration-300"
             >
               <img
                 src={news.image}

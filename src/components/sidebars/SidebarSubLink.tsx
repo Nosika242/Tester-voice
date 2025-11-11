@@ -30,7 +30,7 @@ export default function SidebarSubLink({
           ${
             isActive
               ? "bg-[#00001a] text-white font-semibold"
-              : `${blog.textClass} hover:bg-blue-950/50 hover:text-white`
+              : `${blog.textClass} hover:bg-amber-500/50 hover:text-white`
           }`}
       >
         {sub.image && (

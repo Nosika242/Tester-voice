@@ -1,103 +1,146 @@
-@import "tailwindcss";
 
+@import "tailwindcss";
 :root {
-  --clr-deep: #0c2b4e;
-  --clr-mid1: #1a3d64;
-  --clr-mid2: #1d546c;
-  --clr-light: #f4f4f4;
-  --clr-gray1: #f9fafb;
-  --clr-gray2: #f3f4f6;
-  --text-dark: #0c2b4e;
-  --navy-blue1: #002366;
-  --navy-blue2: #001659;
-  --navy-blue3: #00022e;
-  --navy-blue4: #050054;
-  --navy-blue5: #031273;
-  --color-text-primary: #f0f8ff;
-  --color-card-bg: #0e1038;
-  --border-color: #663d00;
-  --text-color: #ff9900;
-  --lifgtmode-color:#cce6ff;
-  --darkblue:  #050515;
-  /* bg-gradient-to-br from-[#000420] to-[#1a0a00] artist color with yellow touch */
-  /* twitter dark HEX: #292F33  */
-  /* HEX: #CCD6DD, HEX: #66757F */
-  /* facebook HEX: #3B5998, HEX: #8B9DC3 */
-  /* netflix dark HEX: #221F1F */
-  /* bg-linear-to-br from-[#1a0a00] to-[#00001a]  */
-  /* sidebar color */
-  /* bg-[#000420] shadow-xl */
-  /*    className="block px-4 py-3 rounded-lg hover:bg-blue-500 hover:translate-x-1 transition-all" */
-  /* card styles */
-  /* className="bg-linear-to-br from-[#000420] to-[#001040] rounded-xl p-6 shadow-lg border border-blue-400/20 hover:-translate-y-2 hover:shadow-blue-400/30 transition-all duration-300" */
+  /*  LIGHT MODE */
+  --bg-body: #f5f5f4; 
+  --nav-gradient: linear-gradient(to bottom left, #f3f4f6 , #f3f4f6 , #f3f4f6 );
+  --nav: #C8CCD6;
+  --text-primary: #1E1E2A;
+  --text-secondary: #4A5060;
+  --card-body: #F4F5F8;
+  --card-body2: #C8CCD6;
+  --card-border: #D6D8E1;
+  --accent: #B25C00;
+  --hover-bg: #E0E3EB;
+  --input-bg: #FFFFFF;
+  --divider: #C8CCD6;
 }
 
+.dark {
+  --bg-body: rgb(6 10 26 / 1);
+  --nav-gradient: linear-gradient(to bottom left, #060A1A, #0A102A, #050515);
+  --nav: #663d00;
+  --text-primary: #E4E8F2;
+  --text-secondary: #A6ADC9;
+  --card-body: #0D1226;
+  --card-body1: #0C1225;
+  --card-body2: #141b30;
+  --card-border: #1F2845;
+  --accent: #FF9900;
+  --hover-bg: #131A36;
+  --input-bg: #10152B;
+  --divider: #232B4A;
+}
+  
 html, body {
   min-height: 100%;
   height: 100%;
   overflow: hidden;
   margin: 0;
   padding: 0;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--color-text-primary);
-  background: linear-gradient(to bottom, #000420 0%, #00001a 100%);
-  background-attachment: fixed;
-  background-size: cover;
-} */
+
+
+/* searchbar  */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+ .nav-gradient {
+  background-image: var(--nav-gradient);
+   transition: background-image 0.3s ease-in-out;
+} 
  
-/* 
-theme=dark]
-Specificity: (0,1,0)
- {
-    --bg-5: #151617;
-    --bg-4: #1a1b1c;
-    --bg-3: #222324;
-    --bg-2: #2c2d2e;
-    --bg-1: #4b4e52;
-    --bg-L0: var(--bg-l0);
-    --bg-L0-atn: var(--bg-l0-gray);
-    --bg-L1: var(--bg-l1);
-    --bg-L1-intro: var(--gradient-1);
-    --bg-L1-act: var(--gradient-2);
-    --bg-L1-atn: var(--bg-l1-white);
-    --bg-L2: var(--bg-l2);
-    --border-card-default: var(--line-base);
-    --border-card-other: var(--line-base);
-    --divider: var(--line-base);
-    --border-2: #333435;
-    --border-1: #484b4f;
-    --secondary-text: var(--content-tertiary);
-    --primary-text: var(--content-secondary);
-    --subtitle: #cdcecf;
-    --title: var(--content-primary);
-    --shadow-color-0: rgba(0, 0, 0, .1);
-    --shadow-color-1: rgba(0, 0, 0, .2);
-    --shadow-color-2: rgba(0, 0, 0, .3);
-    --shadow-color-3: rgba(0, 0, 0, .4);
-    --skeleton: var(--gray-14);
-    --skeleton-to: var(--gray-12);
-    --scrollbar-thumb: var(--gray-12);
-    --scrollbar-track: var(--gray-14);
-    --hongdou-6: var(--tint-red-base);
-    --bg-primary: var(--bg-l0);
-    --bg-secondary: var(--bg-l1);
-    --bg-tertiary: var(--bg-l2);
-    --bg-modal: var(--fill-high);
-    --bg-card: var(--fill-higher);
-    --bg-tooltip: var(--fill-gray);
-    --bg-level-primary: var(--bg-l0-gray);
-    --bg-level-secondary: var(--bg-l1-white);
-    --bg-level-tertiary: var(--bg-l2);
-    --bg-mask: var(--bg-scrim);
-    --bg-trade-primary: var(--gray-17);
-    --bg-trade-secondary: var(--gray-16);
-    --bg-top-banner: #000c1d;
-    --bg-popconfirm: var(--fill-higher);
-    --bg-tooltips: var(--gray-13);
-    --icon-primary: var(--content-primary);
-    --icon-secondary: var(--content-secondary);
-    --icon-tertiary: var(--content-tertiary);
-    --icon-quarternary: var(--content-disable);
-    --icon-mask: var(--gray-7); */
+.nav-border-color {
+  border-color: var(--nav); 
+}
+.card-body {
+  background-color: var(--card-body);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease-in-out;
+}
+.card-body2 {
+  background-color: var(--card-body2);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease-in-out;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+.input-bg {
+  background-color: var(--input-bg);
+}
+
+.border-card {
+  border-color: var(--card-border);
+}
+.icon-bg {
+  background-color: var(--bg-body);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
+.hover-color {
+  background: var(--hover-bg);
+}
+
+
+
+
+/* .bg-bg {
+#78716c
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 10 26 / var(--tw-bg-opacity));
+  --bg: #000420;
+  --bg2: #1B2039;
+  --bg3: #060A1A;
+  --bg4: #0A102A;
+   <div className="bg-[var(--bg)]"> 
+} */
+
+ /* font-montserrat → heading font
+ font-sans (which maps to DM Sans) */
+/* font-poppins → applies your Poppins heading font 
+ font-inter → applies your Inter font */
+/* font-[Space_Grotesk]  font-manrope  */
+
+
+/* .dark {
+ --bg-body: rgb(6 10 26 / 1);
+  --bg5: #00001a;
+  --surface: #050515;
+  --text: #f4f4f4;
+  --text-muted: #9ca3af;
+  --side: #1B2039;
+  --accent: #1d546c;
+  --highlight: #ff9900;
+  --nav: #663d00;
+  --navy-blue3: #00022e;
+  --color-text-primary: #f0f8ff;
+  --color-card-bg: #0e1038;
+  --lifgtmode-color:#cce6ff;
+  --nav-gradient: linear-gradient(to bottom left, #060A1A, #0A102A, #050515);
+  --nav-gradient2: linear-gradient(to bottom left, #00001a, #000000, #050515);
+} */

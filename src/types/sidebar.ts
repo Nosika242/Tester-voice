@@ -83,18 +83,19 @@ export const sidebarData: SidebarItem[] = [
     name: "Community Zone",
     url: "/voicetrendz/community-zone",
     enabled: true,
-    sublinks: [
-      {
-        name: "Fan Poll",
-        url: "/voicetrendz/community-zone/fan-poll",
-        enabled: true,
-      },
-    ],
+    sublinks: [],
   },
   {
     name: "Advertise with Us",
-    url: "/voicetrendz/advertise-with-us",
+    url: "/voicetrendz/advertise",
     enabled: true,
     sublinks: [],
   },
 ];
+
+
+  // {
+  //       name: "Fan Poll",
+  //       url: "/voicetrendz/community-zone/fan-poll",
+  //       enabled: true,
+  //     },

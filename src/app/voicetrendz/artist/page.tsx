@@ -15,7 +15,7 @@ import { ArtistItem,  artistItems,  } from "@/src/types";
             {artistItems.map((artist, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-bl from-amber-400 via-black to-gray-950 border border-[#00022e] rounded-xl p-4 shadow-lg hover:-translate-y-2 transition-all duration-300"
+                className="border border-[#00022e] rounded-xl p-4 shadow-lg hover:-translate-y-2 transition-all duration-300"
               >
                 <img
                   src={artist.image}

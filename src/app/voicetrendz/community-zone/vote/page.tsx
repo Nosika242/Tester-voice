@@ -6,7 +6,7 @@ export default function VotePage() {
   const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
   const [voted, setVoted] = useState(false);
 
-  // Example artist list — you can later fetch this from your API
+  
   const artists = [
     { id: 1, name: "Taylor Swift" },
     { id: 2, name: "Burna Boy" },

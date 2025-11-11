@@ -3,7 +3,7 @@
 
 import { useRef } from "react";
 import { Search } from "lucide-react";
-import useBlogContext from "@/src/hooks/useBlogContext";
+import useBlogContext from "@/hooks/useBlogContext";
 
 export default function DeskSearchBar() {
   const blog = useBlogContext();

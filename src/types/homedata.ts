@@ -1,6 +1,6 @@
 
 // sidebarData.ts
-import type { StoryItem, ArtistItem, NewsItem } from "@/src/types";
+import type { StoryItem, ArtistItem, NewsItem } from "@/types";
 
 export const hotStories: StoryItem[] = [
  {

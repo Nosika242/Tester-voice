@@ -2,9 +2,9 @@
 
 import { ChevronDown, ChevronRight } from "lucide-react";
 import SidebarSubLink from "./SidebarSubLink";
-import type { SidebarItem as SidebarItemType, SublinkItem } from "@/src/types";
+import type { SidebarItem as SidebarItemType, SublinkItem } from "@/types";
 import Link from "next/link";
-import useBlogContext from "@/src/hooks/useBlogContext";
+import useBlogContext from "@/hooks/useBlogContext";
 
 interface SidebarItemProps {
   item: SidebarItemType;

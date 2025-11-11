@@ -2,7 +2,7 @@
 
 "use client";
 
-import { hotStories, artistItems, newsItems } from "@/src/types";
+import { hotStories, artistItems, newsItems } from "@/types";
 
 export default function DashboardPage() {
   return (

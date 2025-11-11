@@ -1,5 +1,6 @@
 
-import LayoutWrapper from "@/src/components/layout/LayoutWrapper";
+
+import LayoutWrapper from "@/components/layout/LayoutWrapper";
 
 export const metadata = {
   title: "VoiceTrendz | Music Blog",

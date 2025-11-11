@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import useBlogContext from "@/src/hooks/useBlogContext";
+import useBlogContext from "@/hooks/useBlogContext";
 import Image from "next/image";
-import { socialLinks, SocialLink } from "@/src/types";
+import { socialLinks, SocialLink } from "@/types";
 
 export default function FooterPage() {
   const blog = useBlogContext();

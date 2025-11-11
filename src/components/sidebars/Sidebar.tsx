@@ -1,9 +1,9 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { sidebarData } from "@/src/types";
+import { sidebarData } from "@/types";
 import SidebarItem from "./SidebarItem";
-import useBlogContext from "@/src/hooks/useBlogContext";
+import useBlogContext from "@/hooks/useBlogContext";
 import { X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";

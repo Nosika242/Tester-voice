@@ -1,7 +1,7 @@
 
 "use client";
 
-import { ArtistItem,  artistItems,  } from "@/src/types";
+import { ArtistItem,  artistItems,  } from "@/types";
 
  export default function ArtistPage() {
   return (

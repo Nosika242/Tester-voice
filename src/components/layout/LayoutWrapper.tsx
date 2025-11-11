@@ -3,7 +3,7 @@
 import { ReactNode, useState } from "react";
 import Navbar from "./Navbar";
 import Sidebar from "../sidebars/Sidebar";
-import useBlogContext from "@/src/hooks/useBlogContext";
+import useBlogContext from "@/hooks/useBlogContext";
 import FooterPage from "./Footer";
 
 interface LayoutWrapperProps {

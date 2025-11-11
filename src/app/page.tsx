@@ -60,8 +60,9 @@ export default function LandingPage()  {
         transition={{ duration: 1, ease: "easeOut" }}
         className="flex justify-center"
       >
+        
         <Image
-          src={logo_3}
+          src="/assets/logo_3.jpg"
           alt="VoiceTrendz Logo"
           width={180}
           height={180}

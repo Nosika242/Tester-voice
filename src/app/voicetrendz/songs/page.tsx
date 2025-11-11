@@ -1,6 +1,6 @@
 "use client";
 
-import {StoryItem, hotStories} from "@/src/types";
+import {StoryItem, hotStories} from "@/types";
 
 export default function HotstoryPage() {
   return (

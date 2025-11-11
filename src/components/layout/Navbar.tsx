@@ -1,6 +1,6 @@
 "use client";
 import { Search, Menu, X, MoreVertical } from "lucide-react";
-import useBlogContext from "@/src/hooks/useBlogContext";
+import useBlogContext from "@/hooks/useBlogContext";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
